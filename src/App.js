@@ -12,6 +12,7 @@ function App() {
         </p>
 		<p>
 			Hello world from Baptiste!
+			This is a deployment test
 		</p>
         <a
           className="App-link"
