@@ -1,22 +1,20 @@
 # base image
 FROM arm32v7/node:current-stretch-slim
 
-# prepare dependencies installation
-ADD yarn.lock /yarn.lock
-ADD package.json /package.json
+# Create app directory
+WORKDIR /usr/src/app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-# install and cache app dependencies
-# RUN yarn first to update/initiate yarn
-RUN yarn
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
 
-# set working directory
-WORKDIR /app
-ADD . /app
+# Bundle app source
+COPY . .
 
-RUN yarn run build
-
-# start app
-CMD ["yarn", "start"]
+EXPOSE 30000
+CMD [ "npm", "start" ]
