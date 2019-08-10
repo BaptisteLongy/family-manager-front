@@ -1,0 +1,16 @@
+.NewItemButton {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+    color: #FFF;
+    background: #00bcd4;
+    transition: .4s;
+    border: none;
+    margin: 0.5em 0.75em;
+  }
+
+.NewItemButton:hover {
+    background: #1ec7bb;
+}
