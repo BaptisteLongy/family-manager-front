@@ -9,8 +9,13 @@
     transition: .4s;
     border: none;
     margin: 0.5em 0.75em;
+    min-width: 12vh;
   }
 
 .NewItemButton:hover {
     background: #1ec7bb;
+}
+
+.newShoppingItemInput {
+  min-width: 25vh;
 }

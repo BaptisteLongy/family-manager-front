@@ -29,12 +29,13 @@ class NewShoppingItem extends Component {
 
     render() {
         return (
-            <form className="newShoppingItemInput" onSubmit={this.handleSubmit} >
+            <form className="newShoppingItemForm" onSubmit={this.handleSubmit} >
                 <input
                     type="text"
                     autoComplete="given-name"
                     value={this.state.newShoppingItem}
                     onChange={this.handleShoppingItemInput}
+                    className="newShoppingItemInput"
                 />
                 <button type="submit" className="NewItemButton">A acheter</button>
             </form>

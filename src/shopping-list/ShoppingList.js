@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewShoppingItem from './NewShoppingItem';
 import DeleteButton from './DeleteItemButton';
+import './ShoppingList.css';
 
 class ShoppingList extends Component {
     constructor() {
@@ -36,7 +37,7 @@ class ShoppingList extends Component {
                         (data) => (
                             <tr key={data.id}>
                                 <td className="shoppingItemName">{data.name}</td>
-                                <td><DeleteButton idToDelete={data.id} itemDeletedCallBack={this.refreshShoppingList}/></td>
+                                <td className="shoppingItemDeleteButton"><DeleteButton idToDelete={data.id} itemDeletedCallBack={this.refreshShoppingList}/></td>
                             </tr>
                         )
                     )}
