@@ -1,5 +1,6 @@
 # base image
 FROM arm32v7/node:current-stretch-slim
+COPY qemu-arm-static /usr/bin
 
 # Create app directory
 WORKDIR /usr/src/app
