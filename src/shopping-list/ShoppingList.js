@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NewShoppingItem from './NewShoppingItem';
 import DeleteButton from './DeleteItemButton';
-import NewShoppingList from './NewShoppingList';
+// import NewShoppingList from './NewShoppingList';
 import './ShoppingList.css';
 
 class ShoppingList extends Component {
@@ -46,7 +46,7 @@ class ShoppingList extends Component {
                 </tbody>
             </table>
             <NewShoppingItem itemAddedCallback={this.refreshShoppingList}/>
-            <NewShoppingList listAddedCallback={this.refreshShoppingList}/>
+            {/* <NewShoppingList listAddedCallback={this.refreshShoppingList}/> */}
             </div>
         )
     }
