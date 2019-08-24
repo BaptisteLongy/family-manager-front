@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewShoppingItem from './NewShoppingItem';
 import DeleteButton from './DeleteItemButton';
+import NewShoppingList from './NewShoppingList';
 import './ShoppingList.css';
 
 class ShoppingList extends Component {
@@ -12,7 +13,7 @@ class ShoppingList extends Component {
     }
 
     fetchShoppinglist() {
-        fetch(process.env.REACT_APP_SHOPPING_LIST_API)
+        fetch(process.env.REACT_APP_SHOPPING_LIST_URL + "ShoppingItems/")
         .then(results => results.json())
         .then((data) => {
             this.setState({ shoppingList: data })
@@ -45,6 +46,7 @@ class ShoppingList extends Component {
                 </tbody>
             </table>
             <NewShoppingItem itemAddedCallback={this.refreshShoppingList}/>
+            <NewShoppingList listAddedCallback={this.refreshShoppingList}/>
             </div>
         )
     }
