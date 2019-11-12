@@ -13,7 +13,7 @@ class ShoppingList extends Component {
     }
 
     fetchShoppinglist() {
-        fetch(process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingList/1")
+        fetch(process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingLists/1")
         .then(results => results.json())
         .then((data) => {
             this.setState({ shoppingList: data.listOfItems })

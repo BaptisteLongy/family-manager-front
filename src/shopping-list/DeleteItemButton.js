@@ -4,7 +4,7 @@ import './DeleteItemButton.css';
 class DeleteButton extends Component {
 
     deleteItem = () => {
-        var url =process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingList/1/DeleteItem/" + this.props.idToDelete
+        var url =process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingLists/1/DeleteItem/" + this.props.idToDelete
         fetch(url, { method: 'PUT',
             headers:{ 'Content-Type': 'application/json' } })
             .catch(error => console.error('Error:', error))

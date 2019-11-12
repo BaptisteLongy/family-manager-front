@@ -15,7 +15,7 @@ class NewShoppingItem extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const url = process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingList/1/AddItem"
+        const url = process.env.REACT_APP_SHOPPING_LIST_URL + "/ShoppingLists/1/AddItem"
         const data = { name: this.state.newShoppingItem.toString() }
         fetch(url, {
             method: 'PUT',
